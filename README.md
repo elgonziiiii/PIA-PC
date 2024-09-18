@@ -64,4 +64,4 @@ Selecciona la opción deseada (del 1 al 5) para ejecutar la tarea.
 
 Creditos: 
 
--Equipo 4 de la clase de Programacion para Ciberseguridad  
+-Equipo 4 de la clase de Programacion para Ciberseguridad.
