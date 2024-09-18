@@ -1,7 +1,7 @@
 function Api_HashView {
   Set-StrictMode -Version Latest
     Write-Host "Generaremos una lista de hashes para registrar su sistema de archivos local"
-    Write-Host "Por favor, indique de dónde desea obtener los hashes SHA-256 para su análisis con VirusTotal"
+    Write-Host "Por favor indique de donde desea obtener los hashes SHA-256 para su analisis con VirusTotal"
     
     $files = Get-ChildItem -Path ".\*" -File
     $hashes = foreach ($file in $files) {
