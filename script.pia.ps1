@@ -28,9 +28,10 @@ function get-menu {
                 2{
                     try {
                         Write-Host "Listado de Archivos Ocultos"
+                        Get-HiddenFiles
                         
                     } catch {
-                        Write-Host "Error al mostrar el uso de recursos: $_"
+                        Write-Host "Error al buscar los archivos ocultos: $_"
                     }
                 }
                 3{
