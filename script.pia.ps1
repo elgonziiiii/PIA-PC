@@ -43,9 +43,19 @@ function get-menu {
                         Write-Host "Error en el listado de Recursos: $_"
                     }
                 }
-                4{
-                    Write-Host "Saliendo..."
-                    exit
+                4{  
+                  try {
+                    Write-Host "Tarea con mas recursos"
+                    TopProcess
+                 } catch { 
+                     Write-Host "Error en mostrar la tarea: $_"
+                     }
+                 }
+
+                5{ 
+                   Write-Host "Saliendo..."
+                   exit
+                  }  
                 }
                 default {
                     Write-Host "Opción no válida. Por favor, elige una opción del 1 al 4."
