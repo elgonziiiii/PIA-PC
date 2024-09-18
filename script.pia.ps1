@@ -5,6 +5,7 @@
 Import-Module .\Recursos.psm1
 Import-Module .\TopProcess.psm1
 Import-Module .\BuscarArchivosOcultos.psm1
+Import-Module .\API_VIRUSTOTAL_2.psm1
 
 Set-StrictMode -Version Latest
 
