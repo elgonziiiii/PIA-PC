@@ -12,64 +12,56 @@ Set-StrictMode -Version Latest
 function get-menu {
     do {
         try {
-           
-            $menu = Read-Host " `nEscoja una opcion:`n 1: Revision de hashes de archivos y consulta de API de Virus Total `n 2: Listado de archivos ocultos  `n 3: Listado de Uso de Recursos`n 4: Ver Proceso con mas Recursos`n 5: Exit`n Opcio"
+            $menu = Read-Host " `nEscoja una opción:`n 1: Revisión de hashes de archivos y consulta de API de Virus Total `n 2: Listado de archivos ocultos  `n 3: Listado de Uso de Recursos`n 4: Ver Proceso con más Recursos`n 5: Exit`n Opción"
             
             switch ($menu) {
-                1{ 
+                1 { 
                     try {
-                        Write-Host "Revision de hashes y consulta API"
+                        Write-Host "Revisión de hashes y consulta API"
                         Api_HashView
-                        
                     } catch {
-                        Write-Host "Error al realizar la revision: $_"
+                        Write-Host "Error al realizar la revisión: $_"
                     }
                 }
-                2{
+                2 {
                     try {
                         Write-Host "Listado de Archivos Ocultos"
                         Get-HiddenFiles
-                        
                     } catch {
                         Write-Host "Error al buscar los archivos ocultos: $_"
                     }
                 }
-                3{
+                3 {
                     try {
                         Write-Host "Listado de uso de Recursos"
                         Get-ResourceUsage
-                       
                     } catch {
                         Write-Host "Error en el listado de Recursos: $_"
                     }
                 }
-                4{  
-                  try {
-                    Write-Host "Tarea con mas recursos"
-                    TopProcess
-                 } catch { 
-                     Write-Host "Error en mostrar la tarea: $_"
-                     }
-                 }
-
-                5{ 
-                   Write-Host "Saliendo..."
-                   exit
-                  }  
+                4 {  
+                    try {
+                        Write-Host "Tarea con más recursos"
+                        TopProcess
+                    } catch { 
+                        Write-Host "Error en mostrar la tarea: $_"
+                    }
+                }
+                5 { 
+                    Write-Host "Saliendo..."
+                    exit
                 }
                 default {
-                    Write-Host "Opción no válida. Por favor, elige una opción del 1 al 4."
+                    Write-Host "Opción no válida. Por favor, elige una opción del 1 al 5."
                 }
             }
         } catch {
             Write-Host "Error general: $_"
         } finally {
-            
-            Write-Host "Operacion Finalizada"
+            Write-Host "Operación Finalizada"
         }
     } while ($true)
 }
-
 
 
 
