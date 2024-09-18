@@ -27,7 +27,7 @@ function get-menu {
                 }
                 2{
                     try {
-                        Write-Host "Uso de Recursos"
+                        Write-Host "Listado de Archivos Ocultos"
                         
                     } catch {
                         Write-Host "Error al mostrar el uso de recursos: $_"
