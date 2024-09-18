@@ -12,15 +12,15 @@ Set-StrictMode -Version Latest
 function get-menu {
     do {
         try {
-            $menu = Read-Host " `nEscoja una opción:`n 1: Revisión de hashes de archivos y consulta de API de Virus Total `n 2: Listado de archivos ocultos  `n 3: Listado de Uso de Recursos`n 4: Ver Proceso con más Recursos`n 5: Exit`n Opción"
+            $menu = Read-Host " `nEscoja una opcion:`n 1: Revisión de hashes de archivos y consulta de API de Virus Total `n 2: Listado de archivos ocultos  `n 3: Listado de Uso de Recursos`n 4: Ver Proceso con más Recursos`n 5: Exit`n Opción"
             
             switch ($menu) {
                 1 { 
                     try {
-                        Write-Host "Revisión de hashes y consulta API"
+                        Write-Host "Revision de hashes y consulta API"
                         Api_HashView
                     } catch {
-                        Write-Host "Error al realizar la revisión: $_"
+                        Write-Host "Error al realizar la revision: $_"
                     }
                 }
                 2 {
@@ -41,7 +41,7 @@ function get-menu {
                 }
                 4 {  
                     try {
-                        Write-Host "Tarea con más recursos"
+                        Write-Host "Tarea con mas recursos"
                         TopProcess
                     } catch { 
                         Write-Host "Error en mostrar la tarea: $_"
@@ -52,13 +52,13 @@ function get-menu {
                     exit
                 }
                 default {
-                    Write-Host "Opción no válida. Por favor, elige una opción del 1 al 5."
+                    Write-Host "Opcion no valida. Por favor, elige una opcion del 1 al 5."
                 }
             }
         } catch {
             Write-Host "Error general: $_"
         } finally {
-            Write-Host "Operación Finalizada"
+            Write-Host "Operacion Finalizada"
         }
     } while ($true)
 }
