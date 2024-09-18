@@ -2,7 +2,7 @@
 # Josefat De la Garza Almaro 2076405
 #
 
-
+Import-Module .\Recursos.psm1
 
 
 Set-StrictMode -Version Latest
