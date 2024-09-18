@@ -63,6 +63,7 @@ function get-menu {
     } while ($true)
 }
 
+get-menu
 
 
 
