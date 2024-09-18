@@ -61,7 +61,7 @@ function Api_HashView {
             }
         }
         catch {
-            Write-Host "Error: $($_.Exception.Message)"
+          
         }
     }
 }
