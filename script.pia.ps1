@@ -19,7 +19,7 @@ function get-menu {
                 1{ 
                     try {
                         Write-Host "Revision de hashes y consulta API"
-                        
+                        Api_HashView
                         
                     } catch {
                         Write-Host "Error al realizar la revision: $_"
