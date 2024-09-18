@@ -1,6 +1,6 @@
 #JOSAFAT DE LA GARZA AMARO 2076405
 #CODIGO PARA VER EL USO DE LA CPU Y LA RAM Y DISCO DURO 
-function Resource-Usage{
+function Get-ResourceUsage{
 
    Set-StrictMode -Version Latest
 try{
