@@ -1,4 +1,5 @@
 function Api_HashView {
+  Set-StrictMode -Version Latest
     Write-Host "Generaremos una lista de hashes para registrar su sistema de archivos local"
     Write-Host "Por favor, indique de dónde desea obtener los hashes SHA-256 para su análisis con VirusTotal"
     
