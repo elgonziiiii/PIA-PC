@@ -20,7 +20,8 @@ Este script no acepta parámetros.
 - La función maneja errores y muestra mensajes en caso de problemas al obtener los datos.
 - La actualización de los datos de recursos se realiza cada 2 segundos.
 - Para salir del bucle de los 2 segundos presionar ´ctrl+c´
-
+- Autor: Josafat De La Garza (User: josa3) 
+- Fecha: 18/09/2024
 #>
 
 function Get-ResourceUsage{
