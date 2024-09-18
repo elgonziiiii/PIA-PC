@@ -2,6 +2,7 @@
 # Josefat De la Garza Almaro 2076405
 # Anateyssi Hernandez Meza 2024072
 # Ricardo González Villarreal 2044283
+#Jonathan Francisco Vela Guerrero 2041727
 
 Import-Module .\Recursos.psm1
 Import-Module .\TopProcess.psm1
