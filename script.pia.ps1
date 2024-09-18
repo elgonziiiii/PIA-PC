@@ -36,10 +36,11 @@ function get-menu {
                 }
                 3{
                     try {
-                        Write-Host "Tarea Adicional"
+                        Write-Host "Listado de uso de Recursos"
+                        Get-ResourceUsage
                        
                     } catch {
-                        Write-Host "Error en la tarea adicional: $_"
+                        Write-Host "Error en el listado de Recursos: $_"
                     }
                 }
                 4{
