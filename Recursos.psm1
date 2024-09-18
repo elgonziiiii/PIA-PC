@@ -1,5 +1,28 @@
 #JOSAFAT DE LA GARZA AMARO 2076405
 #CODIGO PARA VER EL USO DE LA CPU Y LA RAM Y DISCO DURO 
+
+<#
+.SYNOPSIS
+Muestra el uso actual de los recursos del sistema, incluyendo CPU, memoria y espacio en disco.
+
+.DESCRIPTION
+La función `Get-ResourceUsage` obtiene y muestra información sobre el uso de recursos del sistema, como el porcentaje de tiempo de procesador, la memoria disponible en megabytes y el porcentaje de espacio libre en disco. La información se actualiza cada 2 segundos y se muestra en formato de texto.
+
+.EXAMPLE
+Get-ResourceUsage
+Muestra el uso de recursos del sistema en la consola cada 2 segundos.
+
+.PARAMETER
+Este script no acepta parámetros.
+
+.NOTES
+- La función utiliza `Get-Counter` para obtener los contadores de rendimiento del sistema.
+- La función maneja errores y muestra mensajes en caso de problemas al obtener los datos.
+- La actualización de los datos de recursos se realiza cada 2 segundos.
+- Para salir del bucle de los 2 segundos presionar ´ctrl+c´
+
+#>
+
 function Get-ResourceUsage{
 
    Set-StrictMode -Version Latest
