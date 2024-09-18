@@ -13,15 +13,16 @@ function get-menu {
     do {
         try {
            
-            $menu = Read-Host " `nPlease choose an option:`n 1: Listado de Archivos`n 2: Uso de Recursos`n 3: Tarea Adicional`n 4: Exit`n Opcion"
+            $menu = Read-Host " `nEscoja una opcion:`n 1: Revision de hashes de archivos y consulta de API de Virus Total `n 2: Listado de archivos ocultos  `n 3: Listado de Uso de Recursos`n 4: Ver Proceso con mas Recursos`n 5: Exit`n Opcio"
             
             switch ($menu) {
                 1{ 
                     try {
-                        Write-Host "Listado de Archivos"
+                        Write-Host "Revision de hashes y consulta API"
+                        
                         
                     } catch {
-                        Write-Host "Error al listar los archivos: $_"
+                        Write-Host "Error al realizar la revision: $_"
                     }
                 }
                 2{
