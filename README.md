@@ -22,6 +22,8 @@ Import-Module .\API_VIRUSTOTAL_2.psm1
 
 Establecer el Modo Estricto: El script utiliza el modo estricto para asegurar buenas prácticas de programación:
 
+La primera vez que se ejecute el codigo en el sistema pedira la confirmacion 4 veces
+
 Set-StrictMode -Version Latest
 
 Uso
