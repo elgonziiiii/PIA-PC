@@ -4,14 +4,7 @@
 # Ricardo González Villarreal 2044283
 #Jonathan Francisco Vela Guerrero 2041727
 
-Import-Module .\Recursos.psm1
-Import-Module .\TopProcess.psm1
-Import-Module .\BuscarArchivosOcultos.psm1
-Import-Module .\API_VIRUSTOTAL_2.psm1
-
-Set-StrictMode -Version Latest
-
-   <#
+  <#
     .SYNOPSIS
     Muestra el menú principal y gestiona la selección de opciones.
     .DESCRIPTION
@@ -21,6 +14,14 @@ Set-StrictMode -Version Latest
     get-menu
     Muestra el menú y permite al usuario seleccionar una opción.
     #>
+
+
+Import-Module .\Recursos.psm1
+Import-Module .\TopProcess.psm1
+Import-Module .\BuscarArchivosOcultos.psm1
+Import-Module .\API_VIRUSTOTAL_2.psm1
+
+Set-StrictMode -Version Latest
 
 function get-menu {
     do {
