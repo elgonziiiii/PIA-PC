@@ -6,14 +6,18 @@
 
   <#
     .SYNOPSIS
-    Muestra el menú principal y gestiona la selección de opciones.
+    Muestra el menú principal y gestiona la selección de opciones. #>
+  <#  
     .DESCRIPTION
     Esta función muestra un menú con opciones para realizar diversas tareas, incluyendo la revisión de hashes de archivos, listado de archivos ocultos, listado del uso de recursos y visualización del proceso con más recursos. 
-    La opción 5 permite salir del menú.
+    La opción 5 permite salir del menú. #>
+  <#
+    .NOTES 
+    El programa deberia de funcionar al primer intento pero en caso de que marque un error deberia de funcionar ya perfecto al segundo intento #>
+  <#
     .EXAMPLE
-    get-menu
-    Muestra el menú y permite al usuario seleccionar una opción.
-    #>
+    PS C:\> get-help.\script.pia.ps1 -full#>
+    
 
 
 Import-Module .\Recursos.psm1
