@@ -12,23 +12,23 @@ do
     case $REPLY in
         1)
             echo "Iniciando monitoreo de uso de ancho de banda..."
-            # Aquí puedes añadir tu código
+            # Aquí se añade el modulo 
             ;;
         2)
             echo "Registrando tráfico de red..."
-            # Aquí puedes añadir tu código
+            # Aquí se añade el modulo 
             ;;
         3)
             echo "Detectando dispositivos en la red..."
-            # Aquí puedes añadir tu código
+            # Aquí se añade el modulo 
             ;;
         4)
             echo "Analizando rendimiento de la red..."
-            # Aquí puedes añadir tu código
+            # Aquí se añade el modulo 
             ;;
         5)
             echo "Generando reporte..."
-            # Aquí puedes añadir tu código
+            # Aquí se añade el modulo 
             ;;
         6)
             echo "Saliendo..."
