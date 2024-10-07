@@ -5,7 +5,7 @@ echo "================================="
 echo "        Menú Principal           "
 echo "================================="
 
-PS3="Ingresa un Número: "
+PS3="Ingresa un Numero: "
 
 select opcion in "Monitoreo de uso de ancho de banda"  "Registro de tráfico de red"  "Detección de dispositivos en la red"  "Análisis de rendimiento de la red"  "Generar reporte"  "Salir"
 do
@@ -15,7 +15,7 @@ do
             # Aquí se añade el modulo 
             ;;
         2)
-            echo "Registrando tráfico de red..."
+            echo "Registrando trafico de red..."
             # Aquí se añade el modulo 
             ;;
         3)
@@ -35,7 +35,7 @@ do
             break
             ;;
         *)
-            echo "Opción no válida. Intenta de nuevo."
+            echo "Opcion no valida. Intenta de nuevo."
             ;;
     esac
     echo "Presiona [Enter] para continuar..."
