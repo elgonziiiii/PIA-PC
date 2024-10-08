@@ -1,5 +1,10 @@
 #!/bin/bash
 
+source ./monitoreo.bash
+source ./trafico_red.sh
+source ./dispositivos.bash 
+source ./rendimiento_red.sh
+
 clear
 echo "================================="
 echo "        Menú Principal           "
@@ -16,7 +21,7 @@ do
             ;;
         2)
             echo "Registrando trafico de red..."
-            # Aquí se añade el modulo 
+            
             ;;
         3)
             echo "Detectando dispositivos en la red..."
