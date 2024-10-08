@@ -21,7 +21,7 @@ do
             ;;
         2)
             echo "Registrando trafico de red..."
-            
+            trafico_red
             ;;
         3)
             echo "Detectando dispositivos en la red..."
@@ -29,7 +29,7 @@ do
             ;;
         4)
             echo "Analizando rendimiento de la red..."
-            # Aquí se añade el modulo 
+            analizar_rendimiento_red
             ;;
         5)
             echo "Saliendo..."
