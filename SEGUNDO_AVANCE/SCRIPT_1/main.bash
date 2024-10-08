@@ -17,7 +17,7 @@ do
     case $REPLY in
         1)
             echo "Iniciando monitoreo de uso de ancho de banda..."
-            # Aquí se añade el modulo 
+            monitoreo
             ;;
         2)
             echo "Registrando trafico de red..."
