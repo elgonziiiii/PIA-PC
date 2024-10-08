@@ -1,5 +1,6 @@
 #!/bin/bash
 
+monitoreo(){
 # A ver si tienes ifstat instalado, si no, pues lo bajamos
 if ! command -v ifstat &> /dev/null
 then
@@ -16,3 +17,4 @@ TIME=5
 # Mostrar la velocidad de la red durante el tiempo que pusiste
 echo "Checando la velocidad en $INTERFACE por $TIME segundos..."
 ifstat -i $INTERFACE 1 $TIME
+}
