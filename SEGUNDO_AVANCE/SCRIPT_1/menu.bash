@@ -7,7 +7,7 @@ echo "================================="
 
 PS3="Ingresa un Numero: "
 
-select opcion in "Monitoreo de uso de ancho de banda"  "Registro de tráfico de red"  "Detección de dispositivos en la red"  "Análisis de rendimiento de la red"  "Generar reporte"  "Salir"
+select opcion in "Monitoreo de uso de ancho de banda"  "Registro de tráfico de red"  "Detección de dispositivos en la red"  "Análisis de rendimiento de la red"  "Salir"
 do
     case $REPLY in
         1)
