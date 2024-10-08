@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Nombre del archivo de reporte
-REPORTE="reporte_rendimiento_red_$(date +%Y-%m-%d).log"
-
 # Función para analizar el rendimiento de la red
 analizar_rendimiento_red() {
+
+    # Nombre del archivo de reporte
+    REPORTE="reporte_rendimiento_red_$(date +%Y-%m-%d).log"
+
     # Parámetros de entrada
     SERVER_LATENCIA=${1:-google.com}  # Servidor para medir latencia
     URL_DESCARGA=${2:-http://ipv4.download.thinkbroadband.com/100MB.zip}  # URL para medir descarga
