@@ -27,10 +27,6 @@ do
             # Aquí se añade el modulo 
             ;;
         5)
-            echo "Generando reporte..."
-            # Aquí se añade el modulo 
-            ;;
-        6)
             echo "Saliendo..."
             break
             ;;
