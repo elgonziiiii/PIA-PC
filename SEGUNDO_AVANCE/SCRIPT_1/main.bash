@@ -25,7 +25,7 @@ do
             ;;
         3)
             echo "Detectando dispositivos en la red..."
-            # Aquí se añade el modulo 
+            escaneo
             ;;
         4)
             echo "Analizando rendimiento de la red..."
