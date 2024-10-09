@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Instalar comando bc antes de correr el script
+
 # Función para analizar el rendimiento de la red
 analizar_rendimiento_red() {
 
