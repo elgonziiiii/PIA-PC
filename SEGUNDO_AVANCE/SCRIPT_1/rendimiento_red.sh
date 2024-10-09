@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Instalar comando bc antes de correr el script
+#Instalar comando bc y curl antes de correr el script y correr el comando "sudo apt-get update"
 
 # Función para analizar el rendimiento de la red
 analizar_rendimiento_red() {
