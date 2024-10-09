@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#instalar comando tcpdump y nmap antes de usar
 trafico_red() {
     # Verificar si tcpdump está instalado
     if ! command -v tcpdump &> /dev/null
