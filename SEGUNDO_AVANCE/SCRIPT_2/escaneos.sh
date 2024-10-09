@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Función para mostrar el menú
+#Instalar comando dos2unix y usarlo "dos2unix escaneos.sh"
+# Función para mostrar el menú 
 mostrar_menu() {
   echo "   Menu de Escaneo de Puertos"
   echo "1) Escanear un rango de puertos"
