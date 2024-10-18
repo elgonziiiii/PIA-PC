@@ -47,23 +47,23 @@ def main():
 
         elif opcion == '3':
             directorio = input("Introduce el directorio a escanear: ")
-            resultados_malware = scan_directory(directorio)
+            results_malware = scan_directory(directorio)
             contenido_reporte += f"Opción 3: Escaneo de malware\n"
-            for resultado in resultados_malware:
-                contenido_reporte += f"{resultado}\n"
+            for result in results_malware:
+                contenido_reporte += f"{result}\n"
             contenido_reporte += "\n"
 
         elif opcion == '4':
-            resultados_trafico = analizar_trafico_red()
+            results_trafico = analizar_trafico_red()
             contenido_reporte += f"Opción 4: Análisis de tráfico de red\n"
-            for resultado in resultados_trafico:
-                contenido_reporte += f"{resultado}\n"
+            for result in results_trafico:
+                contenido_reporte += f"{result}\n"
             contenido_reporte += "\n"
 
         elif opcion == '5':
             ip = input("Introduce la IP que deseas analizar: ")
-            resultados_abuse = analizar_ip_abuse(ip)
-            contenido_reporte += f"Opción 5: Detección de vulnerabilidades\n{resultados_abuse}\n\n"
+            results_abuse = analizar_ip_abuse(ip)
+            contenido_reporte += f"Opción 5: Detección de vulnerabilidades\n{results_abuse}\n\n"
 
         elif opcion == '6':
             generar_reporte(nombre_reporte, contenido_reporte)
