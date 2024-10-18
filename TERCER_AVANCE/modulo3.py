@@ -28,6 +28,8 @@ def scan_file(file_path):
                 if pattern in content:
                     logging.warning(f"Malware detected in {file_path} - Pattern: {pattern}")
                     return True
+    except UnicodeDecodeError:
+      logging.warning(f"Cannot read {file_path} due to encoding issues.")
     except Exception as e:
         logging.error(f"Error scanning file {file_path}: {e}")
         raise
