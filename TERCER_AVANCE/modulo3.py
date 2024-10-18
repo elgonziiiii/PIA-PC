@@ -35,6 +35,7 @@ def scan_file(file_path):
 
 def scan_directory(directory_path):
     """Scan all files in the directory for malware."""
+    results = []
     try:
         is_valid_directory(directory_path)
         for root, _, files in os.walk(directory_path):
@@ -42,22 +43,8 @@ def scan_directory(directory_path):
                 file_path = os.path.join(root, file)
                 logging.info(f"Scanning file: {file_path}")
                 if scan_file(file_path):
-                    print(f"Potential malware found in {file_path}. Check logs for details.")
+                    results.append(f"Potential malware found in {file_path}. Check logs for details.")
+        return results
     except Exception as e:
         logging.error(f"Error scanning directory {directory_path}: {e}")
         raise
-
-def main():
-    """Main function to start malware scan."""
-    directory_path = input("Enter the directory to scan: ")
-    try:
-        scan_directory(directory_path)
-        print("Scan completed. Check the logs for details.")
-    except ValueError as ve:
-        print(ve)
-    except Exception as e:
-        logging.critical(f"Critical error occurred: {e}")
-        print("An error occurred. Check the logs for more information.")
-
-if __name__ == "__main__":
-    main()
