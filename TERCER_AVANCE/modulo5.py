@@ -31,5 +31,5 @@ def analizar_ip_abuse(ip_address):
            f"Score de abuso: {data['data']['abuseConfidenceScore']}\n"
         )
         return result
-else:
-    return f"Error en la solicitud: {response.status_code}\n{response.text}"
+    else:
+       return f"Error en la solicitud: {response.status_code}\n{response.text}"
