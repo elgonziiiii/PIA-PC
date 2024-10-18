@@ -6,12 +6,12 @@ from scapy.all import sniff                     #Importado de Modulo4
 from shodan_module import obtenerInfo               #Importado de Modulo2
 from abuseipdb_module import analizar_ip_abuse          #Importado de Modulo5
 
-def generar_reporte(nombre_reporte, contenido):
-    with open(nombre_reporte, 'w') as reporte:
-        reporte.write(contenido)
+def generate_report(report_name, content):
+    with open(report_name, 'w') as report:
+        report.write(content)
 
 def menu():
-    opciones = [
+    options = [
         "1. Usar generador de contraseñas",
         "2. Ver información de IP con Shodan",
         "3. Buscar malware en un directorio",
@@ -19,55 +19,55 @@ def menu():
         "5. Detectar vulnerabilidades en una IP",
         "6. Salir"
     ]
-    for opcion in opciones:
-        print(opcion)
+    for option in options:
+        print(option)
 
 def main():
     # Generar un nombre de archivo único basado en la fecha y hora actuales
-    fecha_hora = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    nombre_reporte = f"reporte_{fecha_hora}.txt"
-    contenido_reporte = f"Reporte generado el: {fecha_hora}\n\n"
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    report_name = f"report_{timestamp}.txt"
+    report_content = f"Reporte generado el: {timestamp}\n\n"
     
     while True:
         print("\n--- Menú Principal ---")
         menu()
-        opcion = input("Elige una opción: ")
+        choice = input("Elige una opción: ")
 
-        if opcion == '1':
-            longitud = int(input("Introduce la longitud deseada de la contraseña: "))
-            contrasena = generar_contrasena(longitud)
-            print(f"Contraseña generada: {contrasena}")
-            contenido_reporte += f"Opción 1: Generador de contraseñas\nContraseña generada: {contrasena}\n\n"
+        if choice == '1':
+            length = int(input("Introduce la longitud deseada de la contraseña: "))
+            password = generar_contrasena(length)
+            print(f"Contraseña generada: {password}")
+            report_content += f"Opción 1: Generador de contraseñas\nContraseña generada: {password}\n\n"
 
-        elif opcion == '2':
+        elif choice == '2':
             api_key = input("Introduce tu API Key de Shodan: ")
             ip = input("Introduce la IP que deseas consultar: ")
-            info_ip = obtenerInfo(api_key, ip)
-            contenido_reporte += f"Opción 2: Información de IP con Shodan\n{info_ip}\n\n"
+            ip_info = obtenerInfo(api_key, ip)
+            report_content += f"Opción 2: Información de IP con Shodan\n{ip_info}\n\n"
 
-        elif opcion == '3':
-            directorio = input("Introduce el directorio a escanear: ")
-            results_malware = scan_directory(directorio)
-            contenido_reporte += f"Opción 3: Escaneo de malware\n"
-            for result in results_malware:
-                contenido_reporte += f"{result}\n"
-            contenido_reporte += "\n"
+        elif choice == '3':
+            directory = input("Introduce el directorio a escanear: ")
+            malware_results = scan_directory(directory)
+            report_content += f"Opción 3: Escaneo de malware\n"
+            for result in malware_results:
+                report_content += f"{result}\n"
+            report_content += "\n"
 
-        elif opcion == '4':
-            results_trafico = analizar_trafico_red()
-            contenido_reporte += f"Opción 4: Análisis de tráfico de red\n"
-            for result in results_trafico:
-                contenido_reporte += f"{result}\n"
-            contenido_reporte += "\n"
+        elif choice == '4':
+            traffic_results = analizar_trafico_red()
+            report_content += f"Opción 4: Análisis de tráfico de red\n"
+            for result in traffic_results:
+                report_content += f"{result}\n"
+            report_content += "\n"
 
-        elif opcion == '5':
+        elif choice == '5':
             ip = input("Introduce la IP que deseas analizar: ")
-            results_abuse = analizar_ip_abuse(ip)
-            contenido_reporte += f"Opción 5: Detección de vulnerabilidades\n{results_abuse}\n\n"
+            abuse_results = analizar_ip_abuse(ip)
+            report_content += f"Opción 5: Detección de vulnerabilidades\n{abuse_results}\n\n"
 
-        elif opcion == '6':
-            generar_reporte(nombre_reporte, contenido_reporte)
-            print(f"\nSaliendo del programa... El reporte ha sido guardado en: {nombre_reporte}")
+        elif choice == '6':
+            generate_report(report_name, report_content)
+            print(f"\nSaliendo del programa... El reporte ha sido guardado en: {report_name}")
             break
 
         else:
