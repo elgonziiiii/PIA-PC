@@ -15,26 +15,14 @@ def obtenerInfo(api_key, ip):
         info_ip = api.host(ip)
         
         # Imprimira la informacion sobre la IP 
-
-        print(f'Informacion de la IP {ip}:')
-        print(f'Organizacion: {info_ip.get("org", "No disponible")}')
-        print(f'sistema operativo: {info_ip.get("os", "No disponible")}')
-        print(f'puertos abiertos: {info_ip.get("ports", "No disponible")}')
-        print(f'ubicacion: {info_ip.get("country_name", "No disponible")}, {info_ip.get("city", "No disponible")}')
-
+        result = (
+            f'Informacion de la IP {ip}:')
+            f'Organizacion: {info_ip.get("org", "No disponible")}\n'
+            f'sistema operativo: {info_ip.get("os", "No disponible")}\n'
+            f'puertos abiertos: {info_ip.get("ports", "No disponible")}\n'
+            f'ubicacion: {info_ip.get("country_name", "No disponible")}, {info_ip.get("city", "No disponible")}\n'
+	)
+	    return result
     
     except Exception as e:
-        print(f'Ocurrrio un error al querer obtener informacion: {e}')
-
-
-
-if __name__ == '__main__':
-
-    # Datos que ingresara el usuario
-
-    api_key = input("Introduce tu API Key de Shodan: ")
-    ip = input("Introduce la IP que deseas consultar: ")
-
-    obtenerInfo(api_key, ip)
-    
-
+        return f'Ocurrrio un error al querer obtener informacion: {e}'
