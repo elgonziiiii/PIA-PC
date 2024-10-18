@@ -45,7 +45,7 @@ def scan_directory(directory_path):
                 file_path = os.path.join(root, file)
                 logging.info(f"Scanning file: {file_path}")
                 if scan_file(file_path):
-                    results.append(f"Potential malware found in {file_path}. Check logs for details.")
+                    results.append(f"Potential malware found in {file_path}. Check malware_scanner for details.")
         return results
     except Exception as e:
         logging.error(f"Error scanning directory {directory_path}: {e}")
