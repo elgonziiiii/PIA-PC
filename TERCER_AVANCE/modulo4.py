@@ -24,5 +24,3 @@ def analizar_trafico_red():
         print(f"Ha ocurrido un error inesperado: {e}")
         return []
 
-# Ejecutar el programa
-analizar_trafico_red()
