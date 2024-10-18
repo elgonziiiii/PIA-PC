@@ -4,6 +4,7 @@ from modulo1 import generar_contrasena    #Importado de Modulo1
 from modulo2 import obtenerInfo               #Importado de Modulo2
 from modulo3 import scan_directory         #Importado de Modulo3
 from scapy.all import sniff                     #Importado de Modulo4
+from modulo4 import analizar_trafico_red
 from modulo5 import analizar_ip_abuse          #Importado de Modulo5
 
 def generate_report(report_name, content):
