@@ -11,6 +11,15 @@ from modulo5 import analizar_ip_abuse          #Importado de Modulo5
 Este programa es una herramienta de seguridad informática que permite realizar
 diferentes acciones para fortalecer la seguridad de tu red y sistema.
 
+ANTES DE USAR EL CODIGO SE DEBE INSTALAR: 
+
+-pip install scapy
+-pip install shodan
+-pip install abuseipdb
+-pip install requests
+
+EN CIERTOS CASOS ES NECESARIO INSTALAR EXTERNAMENTE "Npcap" 
+
 1. **Generador de Contraseñas**: Permite crear contraseñas seguras. Al seleccionar 
    esta opción, se te pedirá que ingreses la longitud deseada para la contraseña. 
    El programa generará una contraseña aleatoria compuesta por letras, números y 
