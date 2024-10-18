@@ -1,9 +1,9 @@
 import os
 import datetime
 from password_generator import generar_contrasena    #Importado de Modulo1
+from shodan_module import obtenerInfo               #Importado de Modulo2
 from malware_scanner import scan_directory         #Importado de Modulo3
 from scapy.all import sniff                     #Importado de Modulo4
-from shodan_module import obtenerInfo               #Importado de Modulo2
 from abuseipdb_module import analizar_ip_abuse          #Importado de Modulo5
 
 def generate_report(report_name, content):
